@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Hover</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div > p {
+            display: none;
+        }
+
+        /*
+            div > p = vai alterar apenas o "p" que estiver dentro da div, no caso "none" para esconde-lo
+        */
+
+        div:hover > p {
+            display: block;
+            color: white;
+            background-color: red;
+            width: 300px;
+        }
+
+        /*
+            div:hover > p = cria um hover que influencia apenas o "p" debntro de uma div ao passar o mouse
+        */
+
+        div:hover {
+            color: red;
+        }
+
+        /* 
+            div:hover = cria um hover que influencia toda a div, no caso faz todo o texto da div ficar vermelho, porém o div:hover > p faz o texto dentro do "p" ficar branco ao passar o mouse e o que está fora do p continua vermelho
+        */
+    </style>
+    
+</head>
+<body>
+    <h1>Exemplo de hover</h1>
+    <p>Passe o mouse sobre o texto abaixo</p>
+    <div>
+        Passe o mouse aqui
+        <p>TEXTO ESCONDIDO...</p>
+    </div>
+    <p>Fim do exemplo</p>
+</body>
+</html>
